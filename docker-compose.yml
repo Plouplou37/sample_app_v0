@@ -28,7 +28,6 @@ services:
     environment:
       - PYTHONUNBUFFERED=0
       - PYTHONPATH=/app
-    ports:
     labels:
       - "traefik.enable=true"
       # [NAMING] Utilisez des noms descriptifs pour les routers
@@ -74,7 +73,6 @@ services:
       timeout: 30s
       retries: 5
       start_period: 30s
-    ports:
     labels:
       - "traefik.enable=true"
       # [NAMING] Utilisez des noms descriptifs pour les routers
