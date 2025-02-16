@@ -79,6 +79,8 @@ services:
       - "traefik.http.routers.ui-router.rule=PathPrefix(`/`)"
       # [PORT] Port interne de l'application
       - "traefik.http.services.ui-service.loadbalancer.server.port=8501"
+      - "traefik.http.services.ui-service.loadbalancer.sticky.cookie=true"
+      - "traefik.http.services.ui-service.loadbalancer.sticky.cookie.name=web_sticky"
     depends_on:
       - api
 
